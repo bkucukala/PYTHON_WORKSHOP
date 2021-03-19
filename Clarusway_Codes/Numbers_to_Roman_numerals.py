@@ -10,11 +10,21 @@ def Convert_Roman( num):
             i += 1
         return roman_num
 
-try:
-    Number = int( input("Lütfen 1 ile 3999 arasında bir sayı giriniz: "))
-    if 4000>Number>0 :
-        print(Convert_Roman(Number))
-    else:
-        print("!!HATA!! Girdiğiniz sayı 1 ile 3999 arasında değildir")
-except ValueError:
-    print("Lütfen integer değer giriniz")
+print("###This program converts decimal numbers to Roman Numerals ###")
+print("(To exit the program, please type ""exit"")")
+print("Please enter a number between 1 and 3999, inclusively : ") 
+condition=True
+while condition :
+    try:
+        Input_Text=input("Please enter a number between 1 and 3999, inclusively : ")
+        Number = int(Input_Text )
+        if 4000>Number>0 :
+            print(Convert_Roman(Number))
+        else:
+            print("Not Valid Input !!!")
+    except ValueError:
+        if Input_Text.lower() !="exit":
+            print("Not Valid Input !!!")
+        else:
+            condition=False
+            print("Exiting the program... Good Bye")
