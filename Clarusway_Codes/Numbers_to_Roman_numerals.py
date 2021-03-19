@@ -11,8 +11,9 @@ def Convert_Roman( num):
         return roman_num
 
 print("###This program converts decimal numbers to Roman Numerals ###")
-print("(To exit the program, please type ""exit"")")
-print("Please enter a number between 1 and 3999, inclusively : ") 
+print('(To exit the program, please type "exit" )')
+
+
 condition=True
 while condition :
     try:
@@ -23,8 +24,8 @@ while condition :
         else:
             print("Not Valid Input !!!")
     except ValueError:
-        if Input_Text.lower() !="exit":
-            print("Not Valid Input !!!")
-        else:
+        if Input_Text.lower() == "exit":
             condition=False
             print("Exiting the program... Good Bye")
+        else:
+            print("Not Valid Input !!!")
