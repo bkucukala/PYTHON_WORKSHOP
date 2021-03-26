@@ -24,7 +24,7 @@ print("###  This program converts milliseconds into hours, minutes, and seconds 
 print('(To exit the program, please type "exit" )')
 
 condition=True
-while condition :
+while True :
     try:
         Input_Text=input("Please enter the milliseconds (should be greater than zero) : ")
         Number = int(Input_Text )
@@ -34,7 +34,7 @@ while condition :
             print("The input should be a decimal number greater then zero")
     except ValueError:
         if Input_Text.lower() == "exit":
-            condition=False
             print("Exiting the program... Good Bye")
+            break
         else:
             print("Your input contains string and can not be converted to decimal number. Please Try again")
